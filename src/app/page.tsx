@@ -87,27 +87,41 @@ export default function AssignmentHelpLanding() {
             <div className="rounded-2xl border border-slate-200 bg-white shadow-sm p-6">
               <h3 className="text-lg font-semibold">Quick Quote</h3>
               <p className="mt-1 text-sm text-slate-600">Share your brief — we’ll reply in minutes.</p>
-              <form className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3" onSubmit={(e)=>e.preventDefault()}>
-                <input required className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Your name"/>
-                <input required type="email" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Email"/>
-                <input className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm sm:col-span-2" placeholder="WhatsApp (optional)"/>
-                <select className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm">
+
+              {/* QUICK QUOTE → Formspree: mgvlwqkz */}
+              <form
+                action="https://formspree.io/f/mgvlwqkz"
+                method="POST"
+                className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3"
+              >
+                <input name="name" required className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Your name"/>
+                <input name="email" required type="email" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Email"/>
+                <input name="whatsapp" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm sm:col-span-2" placeholder="WhatsApp (optional)"/>
+
+                <select name="service" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm">
                   <option>Essay</option>
                   <option>Report</option>
                   <option>Case Study</option>
                   <option>Dissertation</option>
                   <option>Other</option>
                 </select>
-                <select className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm">
+                <select name="level" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm">
                   <option>Undergraduate</option>
                   <option>Masters</option>
                   <option>PhD</option>
                   <option>College</option>
                 </select>
-                <input type="number" min={1} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Word count"/>
-                <input type="date" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"/>
-                <textarea rows={4} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm sm:col-span-2" placeholder="Describe your brief..."/>
-                <button className="sm:col-span-2 rounded-lg bg-indigo-600 px-4 py-2.5 text-white text-sm font-medium hover:bg-indigo-700">Request Quote</button>
+                <input name="wordcount" type="number" min={1} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Word count"/>
+                <input name="deadline" type="date" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"/>
+                <textarea name="brief" rows={4} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm sm:col-span-2" placeholder="Describe your brief..."/>
+
+                {/* Optional helpers */}
+                <input type="hidden" name="_subject" value="New Quick Quote" />
+                {/* <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" /> */}
+
+                <button className="sm:col-span-2 rounded-lg bg-indigo-600 px-4 py-2.5 text-white text-sm font-medium hover:bg-indigo-700">
+                  Request Quote
+                </button>
                 <p className="sm:col-span-2 text-[11px] text-slate-500">By submitting, you agree to our <a className="underline" href="#">Terms</a> & <a className="underline" href="#">Privacy</a>.</p>
               </form>
             </div>
@@ -280,11 +294,18 @@ export default function AssignmentHelpLanding() {
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
             <h3 className="text-lg font-semibold">Send a message</h3>
-            <form className="mt-4 grid gap-3" onSubmit={(e)=>e.preventDefault()}>
-              <input required className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Full name"/>
-              <input required type="email" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Email address"/>
-              <input className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Subject"/>
-              <textarea rows={5} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="How can we help?"/>
+
+            {/* SEND MESSAGE → Formspree: mrbazdqj */}
+            <form
+              action="https://formspree.io/f/mrbazdqj"
+              method="POST"
+              className="mt-4 grid gap-3"
+            >
+              <input name="name" required className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Full name"/>
+              <input name="email" required type="email" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Email address"/>
+              <input name="subject" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Subject"/>
+              <textarea name="message" rows={5} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="How can we help?"/>
+              <input type="hidden" name="_subject" value="New Contact Message" />
               <button className="rounded-lg bg-indigo-600 px-4 py-2 text-white text-sm font-medium hover:bg-indigo-700">Send</button>
             </form>
           </div>
@@ -337,21 +358,27 @@ export default function AssignmentHelpLanding() {
               </button>
             </div>
             <p className="mt-1 text-sm text-slate-600">Fill in the details below and we’ll confirm your quote by email.</p>
-            <form className="mt-4 grid gap-3" onSubmit={(e)=>e.preventDefault()}>
+
+            {/* ORDER NOW → Formspree: mwpnezoa */}
+            <form
+              action="https://formspree.io/f/mwpnezoa"
+              method="POST"
+              className="mt-4 grid gap-3"
+            >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <input required className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Full name"/>
-                <input required type="email" className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Email"/>
+                <input name="name" required className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Full name"/>
+                <input name="email" required type="email" className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Email"/>
               </div>
-              <input className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="WhatsApp (optional)"/>
+              <input name="whatsapp" className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="WhatsApp (optional)"/>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <select className="rounded-lg border border-slate-300 px-3 py-2 text-sm">
+                <select name="service" className="rounded-lg border border-slate-300 px-3 py-2 text-sm">
                   <option>Essay</option>
                   <option>Report</option>
                   <option>Case Study</option>
                   <option>Dissertation</option>
                   <option>Other</option>
                 </select>
-                <select className="rounded-lg border border-slate-300 px-3 py-2 text-sm">
+                <select name="level" className="rounded-lg border border-slate-300 px-3 py-2 text-sm">
                   <option>Undergraduate</option>
                   <option>Masters</option>
                   <option>PhD</option>
@@ -359,14 +386,15 @@ export default function AssignmentHelpLanding() {
                 </select>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <input type="number" min={1} className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Word count"/>
-                <input type="date" className="rounded-lg border border-slate-300 px-3 py-2 text-sm"/>
+                <input name="wordcount" type="number" min={1} className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Word count"/>
+                <input name="deadline" type="date" className="rounded-lg border border-slate-300 px-3 py-2 text-sm"/>
               </div>
-              <textarea rows={5} className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Describe your brief, marking rubric, and references needed..."/>
+              <textarea name="brief" rows={5} className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Describe your brief, marking rubric, and references needed..."/>
               <div className="flex items-center gap-2 text-xs text-slate-600">
-                <input id="agree" type="checkbox" className="h-4 w-4"/>
+                <input id="agree" name="agree" type="checkbox" className="h-4 w-4"/>
                 <label htmlFor="agree">I agree to the Terms, Privacy Policy, and academic integrity guidelines.</label>
               </div>
+              <input type="hidden" name="_subject" value="New Order Request" />
               <button className="rounded-lg bg-indigo-600 px-4 py-2 text-white text-sm font-medium hover:bg-indigo-700">Submit Order</button>
             </form>
           </div>
