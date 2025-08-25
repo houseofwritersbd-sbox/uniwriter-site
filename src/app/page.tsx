@@ -325,17 +325,17 @@ export default function AssignmentHelpLanding() {
           <div>
             <div className="font-semibold">Company</div>
             <ul className="mt-3 space-y-2 text-slate-600">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Blog</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/careers">Careers</a></li>
+              <li><a href="/blog">Blog</a></li>
             </ul>
           </div>
           <div>
             <div className="font-semibold">Legal</div>
             <ul className="mt-3 space-y-2 text-slate-600">
-              <li><a href="#">Terms</a></li>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="/terms">Terms</a></li>
+              <li><a href="/privacy">Privacy</a></li>
+              <li><a href="/cookies">Cookie Policy</a></li>
             </ul>
           </div>
           <div>
