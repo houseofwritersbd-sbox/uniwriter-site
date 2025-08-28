@@ -16,7 +16,7 @@ export default function AssignmentHelpLanding() {
       {/* Top ribbon */}
       <div className="w-full bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-2 text-center text-sm text-white">
-          24/7 Support · Free Plagiarism Report · Confidential & Secure
+          24/7 Support · Free Plagiarism Report · Confidential & Secure · WhatsApp +44 7392 885842
         </div>
       </div>
 
@@ -96,7 +96,7 @@ export default function AssignmentHelpLanding() {
               >
                 <input name="name" required className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Your name"/>
                 <input name="email" required type="email" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Email"/>
-                <input name="whatsapp" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm sm:col-span-2" placeholder="WhatsApp (optional)"/>
+                <input name="whatsapp" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm sm:col-span-2" placeholder="WhatsApp"/>
 
                 <select name="service" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm">
                   <option>Essay</option>
@@ -114,6 +114,7 @@ export default function AssignmentHelpLanding() {
                 <input name="wordcount" type="number" min={1} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Word count"/>
                 <input name="deadline" type="date" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"/>
                 <textarea name="brief" rows={4} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm sm:col-span-2" placeholder="Describe your brief..."/>
+                <input name="reference" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm sm:col-span-2" placeholder="Reference"/>
 
                 {/* Optional helpers */}
                 <input type="hidden" name="_subject" value="New Quick Quote" />
@@ -122,7 +123,7 @@ export default function AssignmentHelpLanding() {
                 <button className="sm:col-span-2 rounded-lg bg-indigo-600 px-4 py-2.5 text-white text-sm font-medium hover:bg-indigo-700">
                   Request Quote
                 </button>
-                <p className="sm:col-span-2 text-[11px] text-slate-500">By submitting, you agree to our <a className="underline" href="#">Terms</a> & <a className="underline" href="#">Privacy</a>.</p>
+                <p className="sm:col-span-2 text-[11px] text-slate-500">By submitting, you agree to our <a className="underline" href="/terms">Terms</a> & <a className="underline" href="/privacy">Privacy</a>.</p>
               </form>
             </div>
           </div>
@@ -183,7 +184,7 @@ export default function AssignmentHelpLanding() {
         </div>
         <ol className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            {t:"1. Submit brief",d:"Upload your rubric, topic, and deadline."},
+            {t:"1. Submit brief",d:"Upload your rubric, topic, and deadline via whatsapp."},
             {t:"2. Get quote",d:"We match you with a subject expert and price fairly."},
             {t:"3. Track progress",d:"Chat with your writer. Request updates and drafts."},
             {t:"4. Download",d:"Receive Turnitin-safe work. Free revisions within scope."},
@@ -285,10 +286,10 @@ export default function AssignmentHelpLanding() {
         <div className="grid lg:grid-cols-2 gap-10">
           <div>
             <h2 className="text-3xl font-bold tracking-tight">Contact us</h2>
-            <p className="mt-2 text-slate-600">Prefer WhatsApp? Message +44 0000 000000.</p>
+            <p className="mt-2 text-slate-600">Prefer WhatsApp? Message +44 7392 885842.</p>
             <div className="mt-6 space-y-2 text-sm text-slate-700">
               <div>📍 London, United Kingdom</div>
-              <div>✉️ support@uniwriter.co.uk</div>
+              {/* <div>✉️ support@uniwriter.co.uk</div> */}
               <div>🕒 24/7 live chat</div>
             </div>
           </div>
@@ -306,6 +307,7 @@ export default function AssignmentHelpLanding() {
               <input name="subject" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Subject"/>
               <textarea name="message" rows={5} className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="How can we help?"/>
               <input type="hidden" name="_subject" value="New Contact Message" />
+              <input name="reference" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Reference"/>
               <button className="rounded-lg bg-indigo-600 px-4 py-2 text-white text-sm font-medium hover:bg-indigo-700">Send</button>
             </form>
           </div>
@@ -369,7 +371,7 @@ export default function AssignmentHelpLanding() {
                 <input name="name" required className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Full name"/>
                 <input name="email" required type="email" className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Email"/>
               </div>
-              <input name="whatsapp" className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="WhatsApp (optional)"/>
+              <input name="whatsapp" className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="WhatsApp"/>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <select name="service" className="rounded-lg border border-slate-300 px-3 py-2 text-sm">
                   <option>Essay</option>
@@ -390,6 +392,7 @@ export default function AssignmentHelpLanding() {
                 <input name="deadline" type="date" className="rounded-lg border border-slate-300 px-3 py-2 text-sm"/>
               </div>
               <textarea name="brief" rows={5} className="rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Describe your brief, marking rubric, and references needed..."/>
+              <input name="reference" className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm" placeholder="Reference"/>
               <div className="flex items-center gap-2 text-xs text-slate-600">
                 <input id="agree" name="agree" type="checkbox" className="h-4 w-4"/>
                 <label htmlFor="agree">I agree to the Terms, Privacy Policy, and academic integrity guidelines.</label>
