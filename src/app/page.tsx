@@ -227,9 +227,10 @@ export default function AssignmentHelpLanding() {
           <p className="mt-2 text-slate-600">Transparent rates that scale with level, urgency, and complexity.</p>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              {t:"Standard",p:"from £8.90 / page",f:["7–10 day delivery","Experienced writer","Free plagiarism report"]},
-              {t:"Express",p:"from £14.90 / page",f:["48–72h delivery","Top 10% writer","Priority support"]},
-              {t:"Premium",p:"from £19.90 / page",f:["24–48h delivery","Senior UK expert","Detailed quality review"]},
+              {t:"Standard",p:"",f:["7–10 day delivery","Experienced writer","Free plagiarism report"]},
+              {t:"Express",p:"",f:["48–72h delivery","Top 10% writer","Priority support"]},
+              // {t:"Express",p:"from £14.90 / page",f:["48–72h delivery","Top 10% writer","Priority support"]},
+              {t:"Premium",p:"",f:["24–48h delivery","Senior UK expert","Detailed quality review"]},
             ].map((plan)=> (
               <div key={plan.t} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                 <div className="flex items-center justify-between">
